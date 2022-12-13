@@ -59,3 +59,8 @@ header{
     color: #4c79d3;
 }
 
+.info{
+    background-color: #ffffff;
+    border-radius: 20px 20px 0px 0px;
+    padding: 20px 0px 0px;
+}
