@@ -45,7 +45,14 @@ header{
     margin: 0 25%;
 }
 
-.button-login:hover{
+.button-default{
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+
+}
+
+.button-login:hover, .button-default:hover{
     background-color: #4c79d3;
     color: #ffffff;
 }
