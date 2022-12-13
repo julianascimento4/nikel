@@ -1,15 +1,18 @@
 #login {
     background: linear-gradient(120deg, #4c79d3 44.9%, #ffffff 45%) no-repeat fixed;
 }
+
 .text-login {
     color: #ffffff;
     font-size: 18px;
     font-weight: 500;      
 }
+
 .coins{
     position: absolute;
     bottom: 50px;
 }
+
 .button-login{
     border-radius: 10px;
     background-color: #4e0070;
@@ -17,11 +20,21 @@
     width: 50%;
     margin: 0 25%;
 }
+
 .button-login:hover{
     background-color: #4c79d3;
     color: #ffffff;
 }
-.link-defaut{
+
+.link-default{
     color: #4e0070;
     cursor: pointer;
+}
+
+.link-default:hover{
+    color: #4c79d3;
+}
+
+.form-text{
+    
 }
