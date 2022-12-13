@@ -1,0 +1,9 @@
+#login {
+    background: linear-gradient(120deg, #4c79d3 44.9%, #ffffff 45%) no-repeat fixed;
+}
+.text-login {
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: 500;
+           
+}
