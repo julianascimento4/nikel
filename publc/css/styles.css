@@ -12,6 +12,14 @@ header{
     background-color: #ffffff;
 }
 
+.color-primary{
+      color: #4e0070; 
+}
+
+.color-secondary{
+      color: #4c79d3;
+}
+
 .text-login {
     color: #ffffff;
     font-size: 18px;
