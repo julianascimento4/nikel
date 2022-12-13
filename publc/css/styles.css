@@ -20,6 +20,12 @@ header{
       color: #4c79d3;
 }
 
+.icon-detail{
+    font-size: 50px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
 .text-login {
     color: #ffffff;
     font-size: 18px;
