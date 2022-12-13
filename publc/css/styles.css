@@ -4,6 +4,24 @@
 .text-login {
     color: #ffffff;
     font-size: 18px;
-    font-weight: 500;
-           
+    font-weight: 500;      
+}
+.coins{
+    position: absolute;
+    bottom: 50px;
+}
+.button-login{
+    border-radius: 10px;
+    background-color: #4e0070;
+    color: #ffffff;
+    width: 50%;
+    margin: 0 25%;
+}
+.button-login:hover{
+    background-color: #4c79d3;
+    color: #ffffff;
+}
+.link-defaut{
+    color: #4e0070;
+    cursor: pointer;
 }
