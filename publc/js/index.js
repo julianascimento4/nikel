@@ -1,12 +1,31 @@
 const myModal = new bootstrap.Modal("#register-modal");
-
+let logged = sessionStorage.getItem("logged");
+const session = localStorage.getItem("session");
 //Logar no sistema
 document.getElementById("login-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const email = document.getElementById("email-input").value;
   const password = document.getElementById("password-input").value;
-  const session = document.getElementById("session-check").checked;
+  const checkSession = document.getElementById("session-check").checked;
+
+  const accout = getAccout(email);
+
+  if (!accout) {
+    alert("Oops! Verifique o usuário ou a senha");
+    return;
+  }
+
+  if (accout) {
+    if (accout.password !== password) {
+      alert("Oops! Verifique o usuário ou a senha");
+      return;
+    }
+
+    saveSession(email, checkSession);
+
+    window.location.href = "home.html";
+  }
 });
 
 //Criar conta
@@ -37,10 +56,19 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
   alert("Conta criada com sucesso");
 });
 
+function checkLogged() {}
+
 function saveAccount(data) {
   localStorage.setItem(data.login, JSON.stringify(data));
 }
 
+function saveSession(data, saveSession) {
+  if (saveSession) {
+    localStorage.setItem("session", data);
+  }
+
+  sessionStorage.setItem("logged", data);
+}
 function getAccout(key) {
   const accout = localStorage.getItem(key);
 
