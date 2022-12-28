@@ -1,5 +1,14 @@
 const myModal = new bootstrap.Modal("#register-modal");
 
+//Logar no sistema
+document.getElementById("login-form").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const email = document.getElementById("email-input").value;
+  const password = document.getElementById("password-input").value;
+  const session = document.getElementById("session-check").checked;
+});
+
 //Criar conta
 document.getElementById("create-form").addEventListener("submit", function (e) {
   e.preventDefault();
@@ -30,4 +39,14 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 
 function saveAccount(data) {
   localStorage.setItem(data.login, JSON.stringify(data));
+}
+
+function getAccout(key) {
+  const accout = localStorage.getItem(key);
+
+  if (accout) {
+    return JSON.parse(accout);
+  }
+
+  return "";
 }
