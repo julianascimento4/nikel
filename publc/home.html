@@ -135,6 +135,109 @@
             </div>
           </div>
         </div>
+        <button
+          class="btn button-float"
+          data-bs-toggle="modal"
+          data-bs-target="#transaction-modal"
+        >
+          <i class="bi bi-plus"></i>
+        </button>
+      </div>
+      <!-- Modal -->
+      <div
+        class="modal fade"
+        id="transaction-modal"
+        tabindex="-1"
+        aria-labelledby="exampleModalLabel"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">
+                Adicionar lançamento
+              </h1>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <form id="transaction-form">
+              <div class="modal-body">
+                <div class="mb-3">
+                  <label for="value-input" class="form-label">Valor</label>
+                  <input
+                    type="number"
+                    step="any"
+                    class="form-control"
+                    id="value-input"
+                    aria-describedby="emailHelp"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="description-input" class="form-label"
+                    >Descrição</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="description-input"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="date-input" class="form-label">Data</label>
+                  <input
+                    type="date"
+                    class="form-control"
+                    id="date-input"
+                    required
+                  />
+                </div>
+                <div class="mb-3">
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="type-input"
+                      id="inlineRadio1"
+                      value="1"
+                      checked
+                    />
+                    <label class="form-check-label" for="inlineRadio1"
+                      >Entrada</label
+                    >
+                  </div>
+                  <div class="form-check form-check-inline">
+                    <input
+                      class="form-check-input"
+                      type="radio"
+                      name="type-input"
+                      id="inlineRadio2"
+                      value="2"
+                    />
+                    <label class="form-check-label" for="inlineRadio2"
+                      >Saída</label
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="button-cancel btn-secondary"
+                  data-bs-dismiss="modal"
+                >
+                  Cancelar
+                </button>
+                <button type="submit" class="button-default">Adicionar</button>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
     </main>
     <script
