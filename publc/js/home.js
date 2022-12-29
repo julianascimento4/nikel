@@ -14,7 +14,8 @@ document
     e.preventDefault();
 
     const value = parseFloat(document.getElementById("value-input").value);
-    const description = document.getElementById("description-input");
+    const description = document.getElementById("description-input").value;
+    const date = document.getElementById("date-input").value;
   });
 
 checkLogged();
