@@ -101,3 +101,7 @@ header {
 .logout {
   min-width: 5rem !important;
 }
+
+.menu {
+  margin-right: 20px;
+}
