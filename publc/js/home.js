@@ -8,7 +8,11 @@ let data = {
 document.getElementById("button-logout").addEventListener("click", logout);
 
 // Adicionar lançamento
-document.getElementById("transctions-form");
+document
+  .getElementById("transctions-form")
+  .addEventListener("submit", function (e) {
+    e.preventDefault();
+  });
 
 checkLogged();
 
