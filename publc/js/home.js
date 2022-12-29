@@ -12,6 +12,9 @@ document
   .getElementById("transctions-form")
   .addEventListener("submit", function (e) {
     e.preventDefault();
+
+    const value = parseFloat(document.getElementById("value-input").value);
+    const description = document.getElementById("description-input");
   });
 
 checkLogged();
