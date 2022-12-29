@@ -7,6 +7,9 @@ let data = {
 
 document.getElementById("button-logout").addEventListener("click", logout);
 
+// Adicionar lançamento
+document.getElementById("transctions-form");
+
 checkLogged();
 
 function checkLogged() {
