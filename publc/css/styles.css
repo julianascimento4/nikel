@@ -1,31 +1,6 @@
 #login {
-  background: linear-gradient(120deg, #4c79d3 44.9%, #ffffff 45%) no-repeat
+  background: linear-gradient(120deg, #4c79d3 43.9%, #ffffff 44%) no-repeat
     fixed;
-}
-
-#app {
-  background: linear-gradient(120deg, #ffffff 44.9%, #4c79d3 45%) no-repeat
-    fixed;
-}
-
-header {
-  border-bottom: 1px solid #bebcbc;
-  padding: 5px;
-  background-color: #ffffff;
-}
-
-.color-primary {
-  color: #4e0070;
-}
-
-.color-secondary {
-  color: #4c79d3;
-}
-
-.icon-detail {
-  font-size: 50px;
-  margin-right: 10px;
-  vertical-align: middle;
 }
 
 .text-login {
@@ -41,40 +16,12 @@ header {
 
 .button-login {
   border-radius: 10px;
-  background-color: #4e0070;
+  border: none;
+  background-color: #4e0060;
   color: #ffffff;
   width: 50%;
   margin: 0 25%;
-}
-
-.button-default {
-  border-radius: 10px;
-  background-color: #4e0070;
-  color: #ffffff;
-}
-
-.button-cancel {
-  border-radius: 10px;
-}
-
-.button-float {
-  border-radius: 100%;
-  height: 60px;
-  width: 60px;
-  position: fixed;
-  padding: 0 !important;
-  bottom: 1rem;
-  right: 2rem;
-  font-size: 35px;
-  border: 2px solid #4e0070;
-  background-color: #4e0070;
-  color: #ffffff;
-}
-
-.button-float:hover {
-  border: 2px solid #4c79d3;
-  background-color: #ffffff;
-  color: #4c79d3;
+  padding: 5px;
 }
 
 .button-login:hover,
@@ -92,14 +39,71 @@ header {
   color: #4c79d3;
 }
 
+#app {
+  background: linear-gradient(120deg, #ffffff 43.9%, #4c79d3 44%) no-repeat
+    fixed;
+}
+
+header {
+  border-bottom: 1px solid #bebebe;
+}
+
+.color-primary {
+  color: #4e0060;
+}
+
+.color-secondary {
+  color: #4c79d3;
+}
+
+.icon-detail {
+  font-size: 50px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 .info {
   background-color: #ffffff;
   border-radius: 20px 20px 0px 0px;
-  padding: 20px 0px 0px;
+  padding: 20px 0px 0px 0px;
+}
+
+.button-default {
+  border-radius: 10px;
+  background-color: #4e0060;
+  color: #ffffff;
+  border: none;
+  padding: 5px 10px 5px 10px;
+}
+
+.button-cancel {
+  border-radius: 10px;
+  border: none;
+  padding: 5px 10px 5px 10px;
+}
+
+.button-float {
+  border-radius: 100%;
+  height: 60px;
+  width: 60px;
+  position: fixed;
+  border: 2px solid #4e0070;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 35px;
+  background-color: #4e0070;
+  color: #ffffff;
+  padding: 0 !important;
+}
+
+.button-float:hover {
+  border: 2px solid #4c79d3;
+  background-color: #ffffff;
+  color: #4c79d3;
 }
 
 .logout {
-  min-width: 5rem !important;
+  min-width: 3rem !important;
 }
 
 .menu {
