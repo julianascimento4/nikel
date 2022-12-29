@@ -4,64 +4,65 @@ const session = localStorage.getItem("session");
 
 checkLogged();
 
-//Logar no sistema
-document.getElementById("login-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+// LOGAR NO SISTEMA
+document
+  .getElementById("login-form")
+  .addEventListener("submit", function (event) {
+    event.preventDefault();
 
-  const email = document.getElementById("email-input").value;
-  const password = document.getElementById("password-input").value;
-  const checkSession = document.getElementById("session-check").checked;
+    const email = document.getElementById("email-input").value;
+    const password = document.getElementById("password-input").value;
+    const checkSession = document.getElementById("session-check").checked;
 
-  const accout = getAccout(email);
+    const account = getAccount(email);
 
-  if (!accout) {
-    alert("Oops! Verifique o usuário ou a senha");
-    return;
-  }
-
-  if (accout) {
-    if (accout.password !== password) {
-      alert("Oops! Verifique o usuário ou a senha");
+    if (!account) {
+      alert("Opps! Verifique o usuário ou a senha");
       return;
     }
 
-    saveSession(email, checkSession);
+    if (account) {
+      if (account.password !== password) {
+        alert("Opps! Verifique o usuário ou a senha");
+        return;
+      }
 
-    window.location.href = "home.html";
-  }
-});
+      saveSession(email, checkSession);
 
-//Criar conta
-document.getElementById("create-form").addEventListener("submit", function (e) {
-  e.preventDefault();
+      window.location.href = "home.html";
+    }
+  });
+
+// CRIAR CONTA
+document.getElementById("create-form").addEventListener("submit", (event) => {
+  event.preventDefault();
 
   const email = document.getElementById("email-create-input").value;
   const password = document.getElementById("password-create-input").value;
 
   if (email.length < 5) {
-    alert("Preencha o campo com um e-mail válido.");
+    alert("Preencha o campo com um e-mail válido");
     return;
   }
 
   if (password.length < 4) {
-    alert("Preecha a senha com no mínimo 4 dígitos");
+    alert("Preecha a senha com no minímo 4 digitos");
     return;
   }
 
   saveAccount({
     login: email,
     password: password,
-    transctions: [],
+    transaction: [],
   });
 
   myModal.hide();
-
   alert("Conta criada com sucesso");
 });
 
 function checkLogged() {
   if (session) {
-    sessionStorage.getItem("logged", session);
+    sessionStorage.setItem("logged", session);
     logged = session;
   }
 
@@ -83,11 +84,12 @@ function saveSession(data, saveSession) {
 
   sessionStorage.setItem("logged", data);
 }
-function getAccout(key) {
-  const accout = localStorage.getItem(key);
 
-  if (accout) {
-    return JSON.parse(accout);
+function getAccount(key) {
+  const account = localStorage.getItem(key);
+
+  if (account) {
+    return JSON.parse(account);
   }
 
   return "";
